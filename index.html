@@ -32,8 +32,9 @@ h2{font-size:2.2rem;margin-bottom:30px;text-align:center;color:#264653;}
 .project-card img,.testimonial-card img{max-width:100%;border-radius:12px;margin-bottom:15px;}
 .btn{background:#2a9d8f;color:#fff;padding:12px 25px;border-radius:8px;font-weight:600;display:inline-block;transition:0.3s;}
 .btn:hover{background:#264653;color:#fff;}
+.project-btn{display:inline-block;background:#2a9d8f;color:#fff;padding:12px 25px;border-radius:8px;font-weight:600;text-align:center;margin:10px 0;transition:0.3s;width:200px;}
+.project-btn:hover{background:#264653;color:#fff;}
 .counter{display:flex;justify-content:center;align-items:center;font-size:1.5rem;margin-top:15px;gap:20px;flex-wrap:wrap;}
-.counter div{background:#e9c46a;color:#264653;padding:15px 25px;border-radius:10px;font-weight:600;}
 .testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;}
 footer{background:#264653;color:#fff;text-align:center;padding:30px;font-size:0.9rem;}
 footer a{color:#e9c46a;margin:0 10px;}
@@ -56,34 +57,52 @@ footer a{color:#e9c46a;margin:0 10px;}
 
 <a href="#donate" class="sticky-donate">Donate Now</a>
 
+<!-- About Us -->
 <section class="about" id="about">
   <h2>About Faith Hope Relief</h2>
-  <p>Faith Hope Relief is a Christian humanitarian initiative dedicated to bringing hope, faith, and relief to vulnerable families in Pakistan. Our mission is to serve those who are most in need, especially families affected by natural disasters, children who cannot access education, and individuals requiring urgent medical care.
-
-We collaborate with local churches, pastors, and community leaders to ensure that every contribution reaches the right people efficiently and transparently. Our focus areas include:
-
-- **Medical Aid:** Providing urgent treatment and life-saving support for individuals like Alvin Francis, whose families cannot afford costly medical procedures.
-- **Education Support:** Helping children in underserved communities attend school, access learning materials, and pursue a better future.
-- **Disaster Relief:** Assisting families affected by floods, storms, or other emergencies with food, shelter, clothing, and rehabilitation services.
-- **Community Empowerment:** Supporting local initiatives that uplift communities and promote long-term development.
-
-Transparency and accountability are at the core of our operations. We provide regular updates, receipts, and progress reports to ensure donors and supporters can see the real impact of their generosity. At Faith Hope Relief, we believe that every act of kindness, no matter how small, can transform lives and bring hope where it is most needed.</p>
+  <p>Faith Hope Relief is a Christian humanitarian initiative dedicated to bringing hope, faith, and relief to vulnerable families in Pakistan. Our mission is to serve those who are most in need, especially families affected by natural disasters, children who cannot access education, and individuals requiring urgent medical care.</p>
+  <p>We collaborate with local churches, pastors, and community leaders to ensure that every contribution reaches the right people efficiently and transparently. Our focus areas include:</p>
+  <ul>
+    <li><strong>Medical Aid:</strong> Providing urgent treatment and life-saving support for individuals like Alvin Francis, whose families cannot afford costly medical procedures.</li>
+    <li><strong>Education Support:</strong> Helping children in underserved communities attend school, access learning materials, and pursue a better future.</li>
+    <li><strong>Disaster Relief:</strong> Assisting families affected by floods, storms, or other emergencies with food, shelter, clothing, and rehabilitation services.</li>
+    <li><strong>Community Empowerment:</strong> Supporting local initiatives that uplift communities and promote long-term development.</li>
+  </ul>
+  <p>Transparency and accountability are at the core of our operations. We provide regular updates, receipts, and progress reports to ensure donors and supporters can see the real impact of their generosity. At Faith Hope Relief, we believe that every act of kindness, no matter how small, can transform lives and bring hope where it is most needed.</p>
 </section>
 
+<!-- Current Project -->
 <section class="projects" id="projects">
   <h2>Our Current Project</h2>
   <div class="project-card">
     <img src="https://oxfordconahs.com/wp-content/uploads/2025/09/Need-Your-Help-Friends-1.png" alt="Alvin Francis Medical Aid">
     <h3>Urgent Medical Aid for Alvin Francis</h3>
     <p>Alvin Francis (62) from Karachi urgently needs life-saving treatment after a stroke. Total cost: <strong>£20,000</strong>.</p>
-    <a class="btn" href="https://gofund.me/9a35382ba" target="_blank">Support Alvin</a>
+
+    <!-- Top Button -->
+    <a class="btn project-btn" href="https://gofund.me/9a35382ba" target="_blank">Donate Now</a>
+
     <div class="counter">
-      <div>Raised: £0</div>
+      <div>Raised: £5,000</div>
       <div>Goal: £20,000</div>
     </div>
+
+    <!-- Bottom Button -->
+    <a class="btn project-btn" href="https://gofund.me/9a35382ba" target="_blank">Support Alvin</a>
   </div>
 </section>
 
+<!-- Give the Gift of Hope -->
+<section id="donate">
+  <h2 style="text-align:center; margin-bottom:20px;">Give the Gift of Hope</h2>
+  <p style="text-align:center; margin-bottom:25px;">Your donation directly supports families in need.</p>
+  <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
+    <a class="btn project-btn" href="https://gofund.me/9a35382ba" target="_blank">Donate via GoFundMe</a>
+    <a class="btn project-btn" href="https://gofund.me/9a35382ba" target="_blank">Donate Now</a>
+  </div>
+</section>
+
+<!-- Testimonials -->
 <section class="testimonials-section" id="testimonials">
   <h2>What Supporters Say</h2>
   <div class="testimonials">
@@ -98,18 +117,14 @@ Transparency and accountability are at the core of our operations. We provide re
   </div>
 </section>
 
-<section id="donate">
-  <h2>Give the Gift of Hope</h2>
-  <p>Your donation directly supports families in need.</p>
-  <a class="btn" href="https://gofund.me/9a35382ba" target="_blank">Donate via GoFundMe</a>
-</section>
-
+<!-- Contact -->
 <section class="contact" id="contact">
   <h2>Contact Us</h2>
   <p>Email: contact@faithhoperelief.org</p>
   <p>WhatsApp: +44-745-605-5016</p>
 </section>
 
+<!-- Footer -->
 <footer>
   <p>&copy; 2025 Faith Hope Relief | All Rights Reserved</p>
   <p><a href="privacy.html">Privacy Policy</a> | <a href="donation.html">Donation Policy</a></p>
@@ -122,5 +137,3 @@ setInterval(()=>{slides[current].classList.remove('active');current=(current+1)%
 
 </body>
 </html>
-
-
