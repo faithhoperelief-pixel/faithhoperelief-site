@@ -38,6 +38,40 @@ h2{font-size:2.2rem;margin-bottom:30px;text-align:center;color:#264653;}
 .testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;}
 footer{background:#264653;color:#fff;text-align:center;padding:30px;font-size:0.9rem;}
 footer a{color:#e9c46a;margin:0 10px;}
+
+/* Give the Gift of Hope Section */
+.donate-btn {
+  background: linear-gradient(135deg,#2a9d8f,#264653);
+  color:#fff;
+  padding:18px 40px;
+  font-size:1.2rem;
+  font-weight:700;
+  border-radius:12px;
+  text-align:center;
+  transition:0.3s;
+}
+.donate-btn:hover {
+  background: linear-gradient(135deg,#264653,#2a9d8f);
+  transform:scale(1.05);
+  color:#fff;
+}
+.donation-counter {display:flex;justify-content:center;gap:25px;flex-wrap:wrap;margin-top:15px;}
+.counter-item {
+  background:#e9c46a;color:#264653;padding:20px 30px;border-radius:12px;text-align:center;font-weight:600;min-width:120px;box-shadow:0 6px 15px rgba(0,0,0,0.2);transition:0.3s;
+}
+.counter-item:hover {background:#f4a261;transform:translateY(-3px) scale(1.02);}
+.counter-item .amount {display:block;font-size:1.5rem;margin-bottom:5px;font-weight:700;}
+.counter-item .label {font-size:1rem;}
+
+/* Testimonials Carousel */
+.testimonial-carousel{
+  display:flex;overflow:hidden;gap:20px;
+}
+.testimonial-card{
+  flex:0 0 300px;background:#fff;border-radius:15px;box-shadow:0 8px 20px rgba(0,0,0,0.1);padding:25px;transition:0.3s;
+}
+.testimonial-card p{margin-bottom:10px;}
+.testimonial-card:hover{transform:translateY(-5px) scale(1.02);box-shadow:0 12px 25px rgba(0,0,0,0.15);}
 @media(max-width:768px){header h1{font-size:2.2rem;}header p{font-size:1rem;}}
 </style>
 </head>
@@ -94,17 +128,31 @@ footer a{color:#e9c46a;margin:0 10px;}
 
 <!-- Give the Gift of Hope -->
 <section id="donate">
-  <h2 style="text-align:center; margin-bottom:20px;">Give the Gift of Hope</h2>
-  <p style="text-align:center; margin-bottom:25px;">Your donation directly supports families in need.</p>
-  <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
-        <a class="btn project-btn" href="https://gofund.me/9a35382ba" target="_blank">Donate Now</a>
+  <h2 style="text-align:center; margin-bottom:15px;">Give the Gift of Hope</h2>
+  <p style="text-align:center; margin-bottom:30px; font-size:1.1rem;">Your donation directly supports families in need.</p>
+
+  <div style="display:flex; flex-direction:column; align-items:center; gap:20px;">
+    <!-- Single Beautiful Donate Button -->
+    <a class="btn donate-btn" href="https://gofund.me/9a35382ba" target="_blank">Donate Now via GoFundMe</a>
+    
+    <!-- Donation Counter -->
+    <div class="donation-counter">
+      <div class="counter-item">
+        <span class="amount">£5,000</span>
+        <span class="label">Raised</span>
+      </div>
+      <div class="counter-item">
+        <span class="amount">£20,000</span>
+        <span class="label">Goal</span>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- Testimonials -->
+<!-- Testimonials Carousel -->
 <section class="testimonials-section" id="testimonials">
   <h2>What Supporters Say</h2>
-  <div class="testimonials">
+  <div class="testimonial-carousel">
     <div class="testimonial-card">
       <p>"Faith Hope Relief helped us during floods. Incredible support and dedication!"</p>
       <strong>- John, UK</strong>
@@ -112,6 +160,10 @@ footer a{color:#e9c46a;margin:0 10px;}
     <div class="testimonial-card">
       <p>"I donated to Alvin’s treatment. Transparency and updates were excellent!"</p>
       <strong>- Mary, USA</strong>
+    </div>
+    <div class="testimonial-card">
+      <p>"Amazing initiative. Every donation truly changes lives!"</p>
+      <strong>- Peter, UK</strong>
     </div>
   </div>
 </section>
@@ -130,10 +182,24 @@ footer a{color:#e9c46a;margin:0 10px;}
 </footer>
 
 <script>
-let slides = document.querySelectorAll('.slide'); let current=0;
-setInterval(()=>{slides[current].classList.remove('active');current=(current+1)%slides.length;slides[current].classList.add('active');},5000);
+// Hero slider
+let slides = document.querySelectorAll('.slide'); 
+let current=0;
+setInterval(()=>{
+  slides[current].classList.remove('active');
+  current=(current+1)%slides.length;
+  slides[current].classList.add('active');
+},5000);
+
+// Testimonials carousel
+const carousel = document.querySelector('.testimonial-carousel');
+let scrollPos=0;
+setInterval(()=>{
+  scrollPos +=310;
+  if(scrollPos > carousel.scrollWidth - carousel.offsetWidth) scrollPos=0;
+  carousel.scroll({left:scrollPos,behavior:'smooth'});
+},4000);
 </script>
 
 </body>
 </html>
-
