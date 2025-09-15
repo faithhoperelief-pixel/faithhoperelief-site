@@ -5,66 +5,46 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Faith Hope Relief – Christian Humanitarian NGO</title>
 <meta name="description" content="Faith Hope Relief is a Christian NGO helping vulnerable families in Pakistan with medical aid, education, and disaster relief. Donate now!">
-<meta property="og:title" content="Faith Hope Relief – Christian Humanitarian NGO">
-<meta property="og:description" content="Helping families in Pakistan with medical aid, education, and disaster relief. Donate now!">
-<meta property="og:image" content="https://oxfordconahs.com/wp-content/uploads/2025/09/Need-Your-Help-Friends-1.png">
-<meta property="og:url" content="https://yourusername.github.io/faithhoperelief-site/">
-<meta name="twitter:card" content="summary_large_image">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Poppins',sans-serif;background:#f9fdfd;color:#264653;line-height:1.6;scroll-behavior:smooth;}
-a{color:inherit;text-decoration:none;}
+body{font-family:'Poppins',sans-serif;background:#f5f9f9;color:#264653;line-height:1.6;scroll-behavior:smooth;}
+a{text-decoration:none;color:inherit;}
 header{position:relative;height:90vh;overflow:hidden;}
 .slide{position:absolute;width:100%;height:100%;background-size:cover;background-position:center;opacity:0;transition:1s;}
 .slide.active{opacity:1;}
-.hero-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.35);}
+.hero-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3));}
 .hero-content{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;color:#fff;z-index:2;}
 .hero-content h1{font-size:3rem;margin-bottom:15px;}
 .hero-content p{font-size:1.3rem;margin-bottom:25px;}
-.hero-content .btn{background:#e9c46a;color:#264653;padding:15px 30px;border-radius:12px;font-weight:600;transition:0.3s;}
-.hero-content .btn:hover{background:#f4a261;color:#fff;}
-.sticky-donate{position:fixed;bottom:20px;right:20px;background:#e9c46a;color:#264653;padding:15px 30px;border-radius:12px;font-weight:600;box-shadow:0 6px 20px rgba(0,0,0,0.2);z-index:1000;transition:0.3s;}
-.sticky-donate:hover{background:#f4a261;color:#fff;}
+.hero-content .btn{background:#6fcf97;color:#fff;padding:15px 30px;border-radius:12px;font-weight:600;transition:0.3s;}
+.hero-content .btn:hover{background:#2a9d8f;color:#fff;transform:scale(1.05);}
+.sticky-donate{position:fixed;bottom:20px;right:20px;background:#6fcf97;color:#fff;padding:15px 30px;border-radius:12px;font-weight:600;box-shadow:0 6px 20px rgba(0,0,0,0.2);z-index:1000;transition:0.3s;}
+.sticky-donate:hover{background:#2a9d8f;color:#fff;transform:scale(1.05);}
 section{padding:80px 20px;max-width:1000px;margin:auto;}
-h2{font-size:2.2rem;margin-bottom:30px;text-align:center;color:#264653;}
-.project-card{background:#fff;border-radius:15px;box-shadow:0 8px 20px rgba(0,0,0,0.1);padding:25px;margin-bottom:40px;transition:0.3s;}
-.project-card:hover{transform:translateY(-5px) scale(1.02);box-shadow:0 12px 25px rgba(0,0,0,0.15);}
-.project-card img{max-width:100%;border-radius:12px;margin-bottom:15px;}
-.btn{background:#2a9d8f;color:#fff;padding:12px 25px;border-radius:8px;font-weight:600;display:inline-block;transition:0.3s;}
-.btn:hover{background:#264653;color:#fff;}
-.project-btn{display:inline-block;background:#2a9d8f;color:#fff;padding:12px 25px;border-radius:8px;font-weight:600;text-align:center;margin:10px 0;transition:0.3s;width:200px;}
-.project-btn:hover{background:#264653;color:#fff;}
+h1,h2,h3{color:#264653;}
+h2{font-size:2.2rem;margin-bottom:30px;text-align:center;}
+.project-card{background:#e0f7f4;border-radius:20px;box-shadow:0 10px 25px rgba(0,0,0,0.1);padding:25px;margin-bottom:40px;transition:0.3s;}
+.project-card:hover{transform:translateY(-5px) scale(1.02);box-shadow:0 15px 30px rgba(0,0,0,0.15);}
+.project-card img{max-width:100%;border-radius:15px;margin-bottom:15px;}
+.btn{background:#6fcf97;color:#fff;padding:12px 25px;border-radius:10px;font-weight:600;display:inline-block;transition:0.3s;}
+.btn:hover{background:#2a9d8f;color:#fff;transform:scale(1.05);}
+.project-btn{display:inline-block;text-align:center;margin:10px 0;width:200px;}
 
-/* Give the Gift of Hope Section */
-.donate-btn {
-  background: linear-gradient(135deg,#2a9d8f,#264653);
-  color:#fff;
-  padding:18px 40px;
-  font-size:1.2rem;
-  font-weight:700;
-  border-radius:12px;
-  text-align:center;
-  transition:0.3s;
-}
-.donate-btn:hover {background: linear-gradient(135deg,#264653,#2a9d8f);transform:scale(1.05);color:#fff;}
-.donation-counter {display:flex;justify-content:center;gap:25px;flex-wrap:wrap;margin-top:15px;}
-.counter-item {background:#e0f7f4;color:#264653;padding:20px 30px;border-radius:12px;text-align:center;font-weight:600;min-width:120px;box-shadow:0 6px 15px rgba(0,0,0,0.2);transition:0.3s;}
-.counter-item:hover {background:#b2e4dc;transform:translateY(-3px) scale(1.02);}
-.counter-item .amount {display:block;font-size:1.5rem;margin-bottom:5px;font-weight:700;}
-.counter-item .label {font-size:1rem;}
+/* Donate Section */
+.donate-btn{background:linear-gradient(135deg,#6fcf97,#2a9d8f);color:#fff;padding:18px 40px;font-size:1.2rem;font-weight:700;border-radius:12px;transition:0.3s;}
+.donate-btn:hover{background:linear-gradient(135deg,#2a9d8f,#6fcf97);transform:scale(1.05);}
 
-/* Testimonials Carousel */
-.testimonial-carousel{
-  display:flex;overflow:hidden;gap:20px;
-}
-.testimonial-card{
-  flex:0 0 300px;
-  background:#e0f7f4;
-  border-radius:15px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.1);
-  padding:25px;
-  transition:0.3s;
-}
+/* Donation Counter */
+.donation-counter{display:flex;justify-content:center;gap:25px;flex-wrap:wrap;margin-top:15px;}
+.counter-item{background:#d0f0ed;color:#264653;padding:20px 30px;border-radius:12px;text-align:center;font-weight:600;min-width:120px;box-shadow:0 6px 15px rgba(0,0,0,0.2);transition:0.3s;}
+.counter-item:hover{background:#b2e4dc;transform:translateY(-3px) scale(1.02);}
+.counter-item .amount{display:block;font-size:1.5rem;margin-bottom:5px;font-weight:700;}
+.counter-item .label{font-size:1rem;}
+
+/* Testimonials */
+.testimonial-carousel-container{overflow:hidden;position:relative;margin-top:40px;}
+.testimonial-carousel{display:flex;gap:20px;transition:transform 0.5s linear;}
+.testimonial-card{flex:0 0 300px;background:#d0f0ed;border-radius:15px;box-shadow:0 8px 20px rgba(0,0,0,0.1);padding:25px;transition:0.3s;}
 .testimonial-card p{margin-bottom:10px;}
 .testimonial-card:hover{transform:translateY(-5px) scale(1.02);box-shadow:0 12px 25px rgba(0,0,0,0.15);}
 @media(max-width:768px){header h1{font-size:2.2rem;}header p{font-size:1rem;}}
@@ -90,6 +70,15 @@ h2{font-size:2.2rem;margin-bottom:30px;text-align:center;color:#264653;}
 <section class="about" id="about">
   <h2>About Faith Hope Relief</h2>
   <p>Faith Hope Relief is a Christian humanitarian initiative dedicated to bringing hope, faith, and relief to vulnerable families in Pakistan. Our mission is to serve those who are most in need, especially families affected by natural disasters, children who cannot access education, and individuals requiring urgent medical care.</p>
+  <h3>Our Focus Areas:</h3>
+  <ul>
+    <li><strong>Medical Aid:</strong> Providing urgent treatment and life-saving support for individuals like Alvin Francis.</li>
+    <li><strong>Education Support:</strong> Helping children attend school and access learning materials.</li>
+    <li><strong>Disaster Relief:</strong> Assisting families affected by floods, storms, or emergencies with food, shelter, and clothing.</li>
+    <li><strong>Community Empowerment:</strong> Supporting local initiatives that uplift communities and promote development.</li>
+  </ul>
+  <h3>Transparency & Trust:</h3>
+  <p>We provide regular updates, receipts, and progress reports to ensure donors see the real impact of their generosity. Every act of kindness, no matter how small, transforms lives and brings hope.</p>
 </section>
 
 <!-- Current Project -->
@@ -99,10 +88,7 @@ h2{font-size:2.2rem;margin-bottom:30px;text-align:center;color:#264653;}
     <img src="https://oxfordconahs.com/wp-content/uploads/2025/09/Need-Your-Help-Friends-1.png" alt="Alvin Francis Medical Aid">
     <h3>Urgent Medical Aid for Alvin Francis</h3>
     <p>Alvin Francis (62) from Karachi urgently needs life-saving treatment after a stroke. Total cost: <strong>£20,000</strong>.</p>
-
-    <!-- Top Button -->
     <a class="btn project-btn" href="https://gofund.me/9a35382ba" target="_blank">Donate Now</a>
-
   </div>
 </section>
 
@@ -110,12 +96,8 @@ h2{font-size:2.2rem;margin-bottom:30px;text-align:center;color:#264653;}
 <section id="donate">
   <h2 style="text-align:center; margin-bottom:15px;">Give the Gift of Hope</h2>
   <p style="text-align:center; margin-bottom:30px; font-size:1.1rem;">Your donation directly supports families in need.</p>
-
   <div style="display:flex; flex-direction:column; align-items:center; gap:20px;">
-    <!-- Single Beautiful Donate Button -->
     <a class="btn donate-btn" href="https://gofund.me/9a35382ba" target="_blank">Donate Now via GoFundMe</a>
-    
-    <!-- Donation Counter -->
     <div class="donation-counter">
       <div class="counter-item">
         <span class="amount">£5,000</span>
@@ -132,24 +114,50 @@ h2{font-size:2.2rem;margin-bottom:30px;text-align:center;color:#264653;}
 <!-- Testimonials Carousel -->
 <section class="testimonials-section" id="testimonials">
   <h2>What Supporters Say</h2>
-  <div class="testimonial-carousel">
-    <div class="testimonial-card">
-      <p>"Faith Hope Relief helped us during floods. Incredible support and dedication!"</p>
-      <strong>- John, UK</strong>
-    </div>
-    <div class="testimonial-card">
-      <p>"I donated to Alvin’s treatment. Transparency and updates were excellent!"</p>
-      <strong>- Mary, USA</strong>
-    </div>
-    <div class="testimonial-card">
-      <p>"Amazing initiative. Every donation truly changes lives!"</p>
-      <strong>- Peter, UK</strong>
+  <div class="testimonial-carousel-container">
+    <div class="testimonial-carousel" id="testimonialSlider">
+      <div class="testimonial-card">
+        <p>"Faith Hope Relief helped us during floods. Incredible support and dedication!"</p>
+        <strong>- John, UK</strong>
+      </div>
+      <div class="testimonial-card">
+        <p>"I donated to Alvin’s treatment. Transparency and updates were excellent!"</p>
+        <strong>- Mary, USA</strong>
+      </div>
+      <div class="testimonial-card">
+        <p>"Amazing initiative. Every donation truly changes lives!"</p>
+        <strong>- Peter, UK</strong>
+      </div>
+      <div class="testimonial-card">
+        <p>"Faith Hope Relief's efforts give real hope to those in need!"</p>
+        <strong>- Sarah, UK</strong>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Contact -->
+<!-- Footer -->
 <section class="contact" id="contact">
   <h2>Contact Us</h2>
   <p>Email: contact@faithhoperelief.org</p>
   <p>WhatsApp: +44-745-605-5016</p>
+</section>
+
+<script>
+// Hero slider
+let slides=document.querySelectorAll('.slide'),current=0;
+setInterval(()=>{slides[current].classList.remove('active');current=(current+1)%slides.length;slides[current].classList.add('active');},5000);
+
+// Testimonials auto slider
+const slider=document.getElementById('testimonialSlider');
+let scrollAmount=0;
+function autoScroll(){
+  scrollAmount+=1.5;
+  if(scrollAmount>=slider.scrollWidth/2) scrollAmount=0;
+  slider.scrollLeft=scrollAmount;
+  requestAnimationFrame(autoScroll);
+}
+autoScroll();
+</script>
+</body>
+</html>
